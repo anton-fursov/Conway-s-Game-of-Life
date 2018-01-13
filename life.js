@@ -7,11 +7,11 @@ canvas.height = 600;
 const width = canvas.width;
 const height = canvas.height;
 const cellSize = 20;
-const gridSizeX = 30;
-const gridSizeY = 30;
+const gridSizeX = width / cellSize;
+const gridSizeY = height / cellSize;
 let speed = 300;
 
-canvas.onclick = function (event) {
+canvas.onclick = (event) => {
   let x = event.offsetX;
   let y = event.offsetY;
   x = Math.floor(x / 20); // 300 /10 = 30
